@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		/*
+		   $("#seleccionar_todo").change(function(){
+			  //Guarda el estado checked del elemento.
+			  var checkeado = $(this).is(':checked');
+		   });
+		   //Guarda estado y luego lo atribuye a los input del documento.
+		   $("#seleccionar_todo").change(function(){
+			  //Guarda el estado checked del elemento.
+			  var checkeado = $(this).is(':checked');
+			  $("input").attr('checked', checkeado);
+		   });
+		   //Guarda el estado y luego lo atribuye a los input de tipo checkbox.
+		   $("#seleccionar_todo").change(function(){
+			  //Guarda el estado checked del elemento.
+			  var checkeado = $(this).is(':checked');
+			  $("input[type='checkbox']").attr('checked', checkeado);
+		   });
+			//Guarda estado y luego se lo asigna a los de la clase producto.
+			//la mejor forma de hacerlo.
+		   $("#seleccionar_todo").change(function(){
+			  //Guarda el estado checked del elemento.
+			  var checkeado = $(this).is(':checked');
+			  $(".producto").attr('checked', checkeado);
+		   });
+		*/
+		   //Guarda estado y luego se lo asigna a los de la clase producto que sean de la lista por el id.
+		   //la mejor forma de hacerlo.
+		   $("#seleccionar_todo").change(function(){
+			  //Guarda el estado checked del elemento.
+			  var checkeado = $(this).is(':checked');
+			  $("#lista_productos .producto").attr('checked', checkeado);
+		   });
+		});
+	</script>
+ </head>
+ <body>
+    <form action="" method="post">
+       <fieldset>
+          <legend> Seleccione sus productos </legend>
+          <ul id="lista_productos">
+             <li> <input type="checkbox" class="producto" value="1" /> XBox 360 </li>
+             <li> <input type="checkbox" class="producto" value="2" /> Wii </li>
+             <li> <input type="checkbox" class="producto" value="3" /> Ps3 </li>
+             <li> <input type="checkbox" class="producto" value="4" /> Ps Vita </li>
+             <li> <input type="checkbox" class="producto" value="5" /> Atari </li>
+          </ul>
+          <input type="checkbox" id="seleccionar_todo" /> Seleccionar todo
+      </fieldset>
+    </form>
+ </body>
+</html>

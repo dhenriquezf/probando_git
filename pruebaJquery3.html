@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+ <head>
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <script type="text/javascript"> 
+       $(document).ready(function(){ 
+          $("#copiar").click(function(){
+             var parrafo = $("#parrafo1").html();
+             $("#parrafo2").html(parrafo);
+          });
+		  $("#copiar2").click(function(){
+			var parrafoNuevo = $("#parrafo3").text();
+			$("#parrafo4").html(parrafoNuevo);
+		  });
+       }); 
+    </script>
+ </head>
+ <body>
+    <p id="parrafo1"> Soy un <strong> parrafo </strong> </p>
+    <a id="copiar" href="#"> Copiar </a>
+    <p id="parrafo2"> ... </p>
+	<p id="parrafo3"> Soy un <strong> parrafo nuevo </strong> </p>
+    <a id="copiar2" href="#"> Copiar </a>
+    <p id="parrafo4"> ... </p>
+ </body>
+</html>

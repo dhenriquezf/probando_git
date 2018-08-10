@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+ <head>
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <script type="text/javascript"> 
+       $(document).ready(function(){
+          $("#value_1").keyup(function(){
+             var valor = $(this).val();
+             $("#value_2").val(valor);
+          });
+       }); 
+    </script>
+ </head>
+ <body>
+    <form action="javascript:void(0);">
+       Escribir algo
+       <input type="text" id="value_1" />
+       <br />
+       <textarea id="value_2" cols="50" rows="10"></textarea>
+    </form>
+ </body>
+</html>

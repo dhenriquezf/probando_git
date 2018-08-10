@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+	<script type="text/javascript">
+		function verificarProductosSeleccionados(){
+			var resultado = false;
+			$(".producto").each(function(){
+				if($(this).is(':checked')){
+				  resultado = true;
+				}
+			});
+			return resultado;
+		}
+		$(document).ready(function(){
+			$("#enviar").click(function(){
+				var seleccionados = verificarProductosSeleccionados();
+				if(seleccionados){ 
+					$("#formulario").css('display', 'none');
+					alert('Gracias!!!');
+				}else{
+					alert('Usted debe seleccionar al menos un producto');
+				}
+			});
+		});
+	</script>
+ </head>
+ <body>
+    <form id="formulario" action="" method="post">
+        <fieldset>
+			<legend> Seleccione sus productos </legend>
+			<ul id="lista_productos">
+				<li> <input type="checkbox" class="producto" value="1" /> XBox 360 </li>
+				<li> <input type="checkbox" class="producto" value="2" /> Wii </li>
+				<li> <input type="checkbox" class="producto" value="3" /> PS3 </li>
+				<li> <input type="checkbox" class="producto" value="4" /> PS Vita </li>
+				<li> <input type="checkbox" class="producto" value="5" /> Atari </li>
+			</ul>
+			<input type="button" id="enviar" value="Enviar" />
+        </fieldset>
+    </form>
+ </body>
+</html>

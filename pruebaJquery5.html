@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+ <head>
+   <script type="text/javascript" src="assets/js/jquery.js"></script>
+   <script type="text/javascript"> 
+      $(document).ready(function(){
+         var texto = $("#caja").html();
+         $("#caja").hover(
+            function(){
+               $(this).html('');//Mouse arriba del elemento
+            },
+            function(){
+               $(this).html(texto);//Mouse fuera del elemento
+            }
+         );
+      }); 
+ </script>
+ </head>
+ <body>
+   <div id="caja" style="width: 80px; height: 80px; padding: 10px; background-color: #ccc;"> Posicione el mouse arriba </div>
+ </body>
+</html>

@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+ <head>
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <script type="text/javascript">
+       $(document).ready(function(){
+          var titulo = $("#parrafo").attr('title');
+          alert(titulo);
+          $("#parrafo").attr('title', 'Soy un nuevo titulo del parrafo');
+          titulo = $("#parrafo").attr('title');
+          alert(titulo);
+       });
+      </script>
+ </head>
+ <body>
+    <p id="parrafo" title="Soy el titulo del parrafo"> Yo amo a Javascript </p>
+ </body>
+</html>

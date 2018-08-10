@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <script type="text/javascript">
+       window.onload = function(){
+          var formulario = document.getElementById('formulario');
+          var boton_enviar = document.getElementById('enviar');
+          boton_enviar.onclick = function(){
+             if(formulario.checkValidity()){
+                alert('El formulario es correcto!');
+             }
+          }
+       }
+    </script>
+ </head>
+ <body>
+    <form id="formulario" action="" method="post" onsubmit="return false;">
+       <label for="nombre_y_apellido"> (*) Nombre y apellido </label>
+       <br />
+       <input type="text" name="nombre_y_apellido" id="nombre_y_apellido" title="Ingrese su nombre y apellido" required />
+       <br />
+       <label for="sueldo"> (*) Sueldo estimativo </label>
+       <br />
+       <input type="number" name="sueldo" id="sueldo" size="5" maxlength="5" title="Ingrese su sueldo estimativo (s&oacute;lo n&uacute;meros)" min="0" max="99999" required />
+       <br />
+       <label for="email"> (*) E-mail </label>
+       <br />
+       <input type="email" name="email" id="email" class="required email" title="Ingrese su direcci&oacute;n de correo electr&oacute;nico" required />
+       <br />
+       <label for="telefono"> Tel&eacute;fono </label>
+       <br />
+       <input type="text" name="telefono" id="telefono" />
+       <br />
+       <label for="cv"> Cv </label>
+       <br />
+       <textarea rows="5" cols="50" name="cv" id="cv" title="Ingrese su Cv" required></textarea>
+       <br />
+       <div> (*) Campos requeridos </div>
+       <input type="submit" id="enviar" value="Enviar" />
+     </form>
+ </body>
+</html>

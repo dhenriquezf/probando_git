@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+ <head>
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <script type="text/javascript">
+       $(document).ready(function(){
+          $("#cargar_imagen").click(function(){
+             var imagen_src = $("#imagen_src").val();
+             $("#imagen").attr('src', imagen_src);
+          });
+       });
+	   //opciones
+	   /*
+		var url = 'https://www.google.com.ar/intl/es_ALL/images/logos/images_logo_lg.gif';
+		 $("#imagen").attr('src', url);
+		 $("#imagen").attr('alt', 'Imagen no disponible');
+		 $("#imagen").attr('title', 'Imagen de carga');
+		 */
+		//O enviar los atributos con un json
+		/*
+		var url = 'https://www.google.com.ar/intl/es_ALL/images/logos/images_logo_lg.gif';
+		$("#imagen").attr({
+		   src: url,
+		   alt: 'Imagen no disponible',
+		   title: 'Imagen de carga'
+		});
+		*/
+		//remover titulo
+		//$("#parrafo").removeAttr('title');
+    </script>
+ </head>
+ <body>
+ <form action="javascript:void(0);">
+    <label> Url de imagen: </label>
+    <br />
+    <input type="text" id="imagen_src" />
+    <br />
+    <input type="button" id="cargar_imagen" value="Cargar imagen" />
+ </form>
+ <img id="imagen" src="assets/imagen_prueba.png" alt="" />
+ <div id="url_de_imagen"></div>
+ </body>
+</html>
